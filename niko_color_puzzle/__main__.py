@@ -22,14 +22,14 @@ def main():
     standard_colors.init()
     puzzle = Puzzle.generate(5)
     run_loop = True
-    counter = 1
+    counter = 0
 
     print("Welcome to the NikoColorPuzzle game. When you're typing in your answer, make sure you only type the first "
           "letter of each color without any spaces. For example: BBPPO; which is: blue blue pink pink orange.")
 
     while run_loop:
-        run_loop = input_loop(puzzle, counter)
         counter += 1
+        run_loop = input_loop(puzzle, counter)
 
     print(f"Congratulations! You won. It took... {counter} tries. Impressive!")
 
